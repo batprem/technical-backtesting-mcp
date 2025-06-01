@@ -1,0 +1,27 @@
+[project]
+name = "technical-backtesting-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "prem", email = "prem.ch@ku.th" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "backtesting>=0.6.4",
+    "click>=8.2.1",
+    "fastmcp>=2.5.2",
+    "price-loaders",
+    "websocket>=0.2.1",
+    "websocket-client>=1.8.0",
+]
+
+[tool.uv.sources]
+price-loaders = { git = "git+https://github.com/batprem/price-loaders", branch = "batprem-patch-1" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+technical-backtesting-mcp = "technical_backtesting_mcp.__main__:main"
