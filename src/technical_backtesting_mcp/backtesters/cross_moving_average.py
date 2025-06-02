@@ -72,8 +72,11 @@ def perform_backtest(
 
     bt = Backtest(df, CrossMovingAverage, cash=10_000, commission=0.002)
     stats = bt.run()
-
-    bt.plot(filename=f"{symbol}.backtest.html")
+    try:
+        bt.plot(filename=f"{symbol}.backtest.html")
+    except Exception as e:
+        # Skip plotting if the file already exists
+        print(e)
     return stats.to_string()
 
 
