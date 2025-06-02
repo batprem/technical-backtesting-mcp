@@ -1,6 +1,6 @@
 [project]
 name = "technical-backtesting-mcp"
-version = "0.1.0"
+version = "0.2.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
@@ -11,13 +11,10 @@ dependencies = [
     "backtesting>=0.6.4",
     "click>=8.2.1",
     "fastmcp>=2.5.2",
-    "price-loaders",
+    "price-loaders>=0.1.0",
     "websocket>=0.2.1",
     "websocket-client>=1.8.0",
 ]
-
-[tool.uv.sources]
-price-loaders = { git = "git+https://github.com/batprem/price-loaders", branch = "batprem-patch-1" }
 
 [build-system]
 requires = ["hatchling"]

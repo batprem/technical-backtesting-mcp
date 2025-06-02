@@ -661,12 +661,17 @@ wheels = [
 
 [[package]]
 name = "price-loaders"
-version = "0.1.4"
-source = { git = "https://github.com/batprem/price-loaders?branch=batprem-patch-1#6c079465fdf7e2bea333f3ff97003845a4e29a00" }
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pandas" },
-    { name = "pytz" },
     { name = "requests" },
+    { name = "websocket" },
+    { name = "websocket-client" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/47/ec/e209f6647e7d8fc2817da58840514d70888188e8297cdc1bc2497cc0e504/price_loaders-0.1.0.tar.gz", hash = "sha256:bb5ba0fb51228f49d7781f51d6da2167c5a27114321649ab71a6416326a5625f", size = 97524 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/53/d3/cbe4e2cfe42d33ba01b849bf95834b62ffd8be061f84369c1af66833a010/price_loaders-0.1.0-py3-none-any.whl", hash = "sha256:8881c90590261be5fb6f615e769e3e1194ed1e14e81fced0ca8a67df9baec3d8", size = 5741 },
 ]
 
 [[package]]
@@ -961,7 +966,7 @@ requires-dist = [
     { name = "backtesting", specifier = ">=0.6.4" },
     { name = "click", specifier = ">=8.2.1" },
     { name = "fastmcp", specifier = ">=2.5.2" },
-    { name = "price-loaders", git = "https://github.com/batprem/price-loaders?branch=batprem-patch-1" },
+    { name = "price-loaders", specifier = ">=0.1.0" },
     { name = "websocket", specifier = ">=0.2.1" },
     { name = "websocket-client", specifier = ">=1.8.0" },
 ]
