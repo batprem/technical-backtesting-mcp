@@ -6,8 +6,6 @@ from typing import Sequence, cast
 from price_loaders.tradingview import load_asset_price
 
 
-
-
 def SMA(values, n):
     """
     Return simple moving average of `values`, at
@@ -43,7 +41,13 @@ class CrossMovingAverage(Strategy):
             self.position.close()
 
 
-def perform_backtest(symbol: str, n1: int = 10, n2: int = 20, cash: float = 10_000, commission: float = 0.002) -> str:
+def perform_backtest(
+    symbol: str,
+    n1: int = 10,
+    n2: int = 20,
+    cash: float = 10_000,
+    commission: float = 0.002,
+) -> str:
     """Perform a backtest for a given symbol and return the stats.
 
     Args:
@@ -63,10 +67,8 @@ def perform_backtest(symbol: str, n1: int = 10, n2: int = 20, cash: float = 10_0
     except ValueError:
         df.columns = ["Open", "High", "Low", "Close", "Volume"]
 
-
     df.index = pd.to_datetime(cast(pd.DatetimeIndex, df.index.date))
     df.index = pd.DatetimeIndex(df.index)
-
 
     bt = Backtest(df, CrossMovingAverage, cash=10_000, commission=0.002)
     stats = bt.run()
