@@ -6,14 +6,12 @@ readme = "README.md"
 authors = [
     { name = "prem", email = "prem.ch@ku.th" }
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
     "backtesting>=0.6.4",
     "click>=8.2.1",
     "fastmcp>=2.5.2",
     "price-loaders>=0.1.0",
-    "websocket>=0.2.1",
-    "websocket-client>=1.8.0",
 ]
 
 [build-system]

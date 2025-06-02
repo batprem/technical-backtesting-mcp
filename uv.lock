@@ -950,15 +950,13 @@ wheels = [
 
 [[package]]
 name = "technical-backtesting-mcp"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "backtesting" },
     { name = "click" },
     { name = "fastmcp" },
     { name = "price-loaders" },
-    { name = "websocket" },
-    { name = "websocket-client" },
 ]
 
 [package.metadata]
@@ -967,8 +965,6 @@ requires-dist = [
     { name = "click", specifier = ">=8.2.1" },
     { name = "fastmcp", specifier = ">=2.5.2" },
     { name = "price-loaders", specifier = ">=0.1.0" },
-    { name = "websocket", specifier = ">=0.2.1" },
-    { name = "websocket-client", specifier = ">=1.8.0" },
 ]
 
 [[package]]
